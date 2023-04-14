@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  database:
+    container_name: database
+    image: postgres:14
+    env_file:
+      - ".docker/conf/common.env"
+    volumes:
+      - ".docker/conf/postgres/postgresql.conf:/etc/postgresql/postgresql.conf"
+    networks:
+      - db-net
+    ports:
+      - "5432:5432"
+
+  backend:
+    container_name: backend
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile
+    image: backend:latest
+    command: "sh /application/.docker/conf/django-dev.sh"
+    volumes:
+      - "./:/application"
+    working_dir: /application
+    depends_on:
+      - database
+    env_file:
+      - ".docker/conf/common.env"
+      - ".docker/conf/server.env"
+    environment:
+      PYTHONUNBUFFERED: 1
+    ports:
+      - "8000:8000"
+    networks:
+      - db-net
+
+networks:
+    db-net:
