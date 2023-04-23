@@ -19,7 +19,7 @@ services:
       context: .
       dockerfile: ./.docker/Dockerfile
     image: backend:latest
-    command: "sh /application/.docker/conf/django-dev.sh"
+    command: "sh /application/.docker/conf/gunicorn/django-dev.sh"
     volumes:
       - "./:/application"
     working_dir: /application
