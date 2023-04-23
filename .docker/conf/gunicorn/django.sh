@@ -4,7 +4,7 @@ NAME="shop-on-the-couch"                  # Name of the application
 DJANGODIR=/application                # Django project directory
 
 DJANGO_NUM_WORKERS=2      # how many worker processes should Gunicorn spawn
-DJANGO_ASGI_MODULE=imcslms.asgi  # WSGI module name
+DJANGO_ASGI_MODULE=backend.asgi  # WSGI module name
 WORKER_CLASS=uvicorn.workers.UvicornWorker
 # Activate the virtual environment
 cd ${DJANGODIR}
