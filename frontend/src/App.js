@@ -8,6 +8,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Stage has been deployed. Fuck Sergey Semenov.
+          <br>
+              And Kirill Pogranichniy.
         </p>
         <a
           className="App-link"
