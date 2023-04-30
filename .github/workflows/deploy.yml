@@ -19,6 +19,7 @@ jobs:
                 script: |
                   cd shop-on-the-couch
                   git checkout -B main
+                  git pull
                   cd frontend
                   npm run prod_build
                   cd ..
