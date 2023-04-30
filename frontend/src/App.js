@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Stage has been deployed.
+          Stage has been deployed :).
           Fuck Sergey Semenov, Kirill Pogranichniy, Michael Litvin
         </p>
         <a
