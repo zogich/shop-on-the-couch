@@ -17,8 +17,8 @@ jobs:
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.SSH_KEY }}
                 script: |
-                  docker compose -f .docker/docker-compose.prod.yml stop
                   cd shop-on-the-couch
+                  docker compose -f .docker/docker-compose.prod.yml stop
                   git checkout -B main
                   git pull
                   cd frontend
