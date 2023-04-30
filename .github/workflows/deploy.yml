@@ -17,6 +17,7 @@ jobs:
                 username: ${{ secrets.USERNAME }}
                 key: ${{ secrets.SSH_KEY }}
                 script: |
+                  docker compose -f .docker/docker-compose.prod.yml stop
                   cd shop-on-the-couch
                   git checkout -B main
                   git pull
@@ -26,3 +27,4 @@ jobs:
                   docker compose -f .docker/docker-compose.prod.yml build
                   docker compose -f .docker/docker-compose.prod.yml up --detach
                   docker compose -f .docker/docker-compose.prod.yml exec backend python manage.py collectstatic
+                  docker system prune -f
