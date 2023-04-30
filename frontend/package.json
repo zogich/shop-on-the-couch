@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "stage_build": "BUILD_PATH='build_react' react-scripts build && rm -rf ../build_react && mv -f build_react ../"
+    "prod_build": "BUILD_PATH='build_react' react-scripts build && rm -rf ../build_react && mv -f build_react ../"
   },
   "eslintConfig": {
     "extends": [

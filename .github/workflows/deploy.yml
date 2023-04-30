@@ -18,8 +18,9 @@ jobs:
                 key: ${{ secrets.SSH_KEY }}
                 script: |
                   cd shop-on-the-couch
-                  git pull
+                  git checkout -B main
                   cd frontend
                   npm run prod_build
                   cd ..
-                  docker compose -f .docker/docker-compose.prod.yml up -d --no-deps --build
+                  docker compose -f .docker/docker-compose.prod.yml build
+                  docker compose -f .docker/docker-compose.prod.yml up --detach
