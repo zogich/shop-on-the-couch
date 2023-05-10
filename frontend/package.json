@@ -6,8 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prod_build": "vite build && rm -rf ../dist && mv -f dist ../",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "prod_build": "vite build"
   },
   "dependencies": {
     "vue": "^3.2.47",
