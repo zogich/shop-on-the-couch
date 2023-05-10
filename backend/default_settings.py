@@ -67,7 +67,7 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = [
-  os.path.join(BASE_DIR, "build_react/static"),
+  os.path.join(BASE_DIR, "dist"),
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
