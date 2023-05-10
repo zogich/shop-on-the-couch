@@ -20,6 +20,7 @@ jobs:
                   cd shop-on-the-couch
                   docker compose -f .docker/docker-compose.prod.yml stop
                   git checkout -B main
+                  git reset --hard master
                   git pull
                   cd frontend
                   npm run prod_build
