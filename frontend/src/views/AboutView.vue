@@ -4,6 +4,17 @@
   </div>
 </template>
 
+
+<script>
+import {NButton} from 'naive-ui'
+export default {
+  components: {
+    NButton
+  }
+}
+
+</script>
+
 <style>
 @media (min-width: 1024px) {
   .about {
