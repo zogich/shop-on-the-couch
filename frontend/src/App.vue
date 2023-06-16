@@ -2,15 +2,16 @@
 import { RouterLink, RouterView } from 'vue-router'
 import ShopHeader from "./components/ShopHeader.vue"
 import ShopFooter from "./components/ShopFooter.vue"
+import {NMessageProvider} from 'naive-ui'
 
 </script>
 
 <template>
-  <div class="page-container">
+  <n-message-provider>
     <ShopHeader />
     <RouterView />
     <ShopFooter />
-  </div>
+  </n-message-provider>
 </template>
 
 <style scoped>
