@@ -1,17 +1,21 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import ShopHeader from "./components/ShopHeader.vue"
+import ShopFooter from "./components/ShopFooter.vue"
 
 </script>
 
 <template>
-  <header>Хедер</header>
-  <RouterView />
-  <footer>
-    Подвал
-  </footer>
-
+  <div class="page-container">
+    <ShopHeader />
+    <RouterView />
+    <ShopFooter />
+  </div>
 </template>
 
 <style scoped>
+ .page-container {
+   /*display: flex;*/
+   /*flex-direction: column;*/
+ }
 </style>
