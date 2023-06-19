@@ -11,7 +11,7 @@
     <n-divider />
     <div class="date-and-category">
       <span>01.01.2001</span>
-      <span>Категория</span>
+      <span>{{this.article.category}}</span>
     </div>
   </n-card>
   </n-layout>
@@ -29,11 +29,9 @@ export default {
   props: {
     article: Object
   },
-
   async created(){
     console.log(this.article)
   },
-
 }
 
 </script>
