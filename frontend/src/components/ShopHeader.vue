@@ -7,7 +7,7 @@
         <div class="search-tab">
         <n-dropdown
             @select="handleSelect"
-            :options="options"
+            :options="this.categories"
             placement="bottom-start"
             trigger="hover">
           <n-button color="#616575">Категории</n-button>
@@ -38,45 +38,28 @@ export default defineComponent({
     const message = useMessage();
     return {
       value: ref(null),
-      options: [
-        {
-          label: 'Одежда',
-          key: 'Одежда',
-        },
-        {
-          label: "Обувь",
-          key: "Обувь"
-        },
-        {
-          label: 'Верхняя одежда',
-          key: 'Верхняя одежда'
-        },
-        {
-          label: 'Домашняя одежда',
-          key: 'Домашняя одежда'
-        },
-        {
-          label: 'Купальники',
-          key: 'Купальники'
-        },
-        {
-          label: 'Аксессуары',
-          key: 'Аксессуары'
-        },
-        {
-          label: 'Идеи для подарков',
-          key: 'Идеи для подарков'
-        },
-        {
-          label: 'Marina rinaldi',
-          key: 'Marina rinaldi'
-        }
-      ],
       handleSelect(key) {
         message.info(String(key))
-      }
+      },
     }
+  },
+
+  data() {
+    return{
+      categories: [],
+    }
+  },
+  methods() {
+
+  },
+
+  async created(){
+    await this.$store.dispatch('fetchCategories');
+    this.$store.state.article.categories.forEach(element =>{
+      this.categories.push({label: element.name, key: element.name})
+    })
   }
+
 })
 
 </script>

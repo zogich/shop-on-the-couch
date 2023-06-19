@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-import catalogModule from './modules/ catalog.js'
+import articleModule from "./modules/article.js";
 
 export default createStore({
   state: {
@@ -9,6 +9,6 @@ export default createStore({
   actions: {
   },
   modules: {
-    catalog: catalogModule,
+    article: articleModule,
   },
 })

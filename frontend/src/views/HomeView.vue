@@ -1,8 +1,3 @@
-<script setup>
-import ArticleCardNormal from "../components/ArticleCardNormal.vue";
-import ArticleCardLong from "../components/ArticleCardLong.vue";
-</script>
-
 <template>
   <n-back-top
       :right="40"
@@ -25,28 +20,32 @@ import ArticleCardLong from "../components/ArticleCardLong.vue";
   </n-back-top>
   <ArticleCardLong />
     <n-grid cols="1 s:2 m:4" responsive="screen" :x-gap="10" :y-gap="10">
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
-      <n-grid-item><ArticleCardNormal/></n-grid-item>
+      <n-grid-item v-for="item in this.$store.state.article.articles" :key="item.id" >
+        <ArticleCardNormal :article="item"></ArticleCardNormal>
+      </n-grid-item>
     </n-grid>
 </template>
 
 <script>
 import {NButton, NLayout, NSpace, NCard, NGrid, NGridItem, NBackTop} from 'naive-ui'
+import ArticleCardNormal from "../components/ArticleCardNormal.vue";
+import ArticleCardLong from "../components/ArticleCardLong.vue";
+
 
 export default {
   name: "HomeView",
   components: {
-    NLayout, NButton, NSpace, NCard, NGrid, NGridItem, NBackTop
+    NLayout, NButton, NSpace, NCard, NGrid, NGridItem, NBackTop, ArticleCardNormal, ArticleCardLong
+  },
+  data(){
+    return {
+      articles: [],
+    }
+  },
+  methods: {
+  },
+  async created(){
+      await this.$store.dispatch('fetchAllArticles')
   }
 }
 </script>
