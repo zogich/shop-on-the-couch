@@ -1,10 +1,13 @@
+<script setup>
+</script>
+
 <template>
   <n-layout>
-  <n-card title="Название статьи" size="medium">
+  <n-card :title="this.article.name" size="medium">
     <template #cover>
       <img src="./src/assets/logo.svg" alt="">
     </template>
-    <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="card-description"> {{this.article.text}} </p>
     <n-divider />
     <div class="date-and-category">
       <span>01.01.2001</span>
@@ -22,7 +25,15 @@ export default {
   name: "ArticleCardNormal",
   components: {
     NCard, NLayout, NSpace, NButton, NDivider
-  }
+  },
+  props: {
+    article: Object
+  },
+
+  async created(){
+    console.log(this.article)
+  },
+
 }
 
 </script>

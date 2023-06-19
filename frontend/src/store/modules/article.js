@@ -1,12 +1,16 @@
 import api from "../api";
 
-const catalogModule = {
+const articleModule = {
     state: () => ({
-        categories: null
+        categories: [],
+        articles: []
     }),
     mutations: {
         setCategories(state, catg){
             state.categories = catg;
+        },
+        setArticles(state, articl){
+            state.articles = articl;
         }
     },
     actions: {
@@ -15,9 +19,15 @@ const catalogModule = {
                 context.commit('setCategories', response.data)
             }
             )
+        },
+
+        async fetchAllArticles(context){
+            await api.get('/api/article/').then(response =>{
+                context.commit('setArticles', response.data)
+            })
         }
     },
     getters: {},
 }
 
-export default catalogModule
+export default articleModule
