@@ -1,8 +1,6 @@
 <template>
   <div>
-    Ваше имя: {{name}}
-    Это будущий каталог.
-    <n-button>Ок</n-button>
+    <n-button type="error">Ок</n-button>
   </div>
 </template>
 
@@ -17,7 +15,7 @@ export default {
   },
   data(){
     return {
-      name: 'Егор',
+      name: 'Михаил',
     }
   }
 }
