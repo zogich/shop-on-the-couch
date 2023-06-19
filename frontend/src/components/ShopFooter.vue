@@ -1,37 +1,34 @@
 <template>
   <n-config-provider>
-  <n-layout-footer bordered>
+  <n-layout-footer bordered position="responsive">
     <h1>Logo</h1>
     <n-space horizontal style="gap: 3px" justify='space-between' align="start">
     <n-space vertical>
       <n-button type="tertiary">Связаться с нами</n-button>
-      <a href="">Политика конфиденциальности</a>
-      <a href="">Пользовательское соглашение</a>
+      <a href="">Стать частью команды</a>
+      <a href="">О нас</a>
     </n-space>
     <n-space vertical>
       <span>Каталог</span>
       <n-space>
         <n-space vertical>
-          <a href="">Одежда</a>
-          <a href="">Обувь</a>
-          <a href="">Верхняя одежда</a>
-          <a href="">Домашняя одежда</a>
+          <a href="">Новости</a>
+          <a href="">Люди</a>
+          <a href="">Тренды</a>
+          <a href="">Сообщества</a>
         </n-space>
         <n-space vertical>
-          <a href="">Купальники</a>
-          <a href="">Аксессуары</a>
-          <a href="">Идеи для подарков</a>
-          <a href="">Marina rinaldi</a>
+          <a href="">Справочкник</a>
+          <a href="">Спецпроект</a>
+          <a href="">ASAP</a>
         </n-space>
       </n-space>
     </n-space>
     <n-space vertical>
-      <span>О компании</span>
+      <span>Подпишись</span>
       <n-space vertical>
-        <a href="">О нас</a>
-        <a href="">Контакты</a>
-        <a href="">Доставка</a>
-        <a href="">Оплата</a>
+        <a href="">ВКонтакте</a>
+        <a href="">Telegram</a>
       </n-space>
     </n-space>
     <div class="fourth-section">
@@ -39,29 +36,22 @@
       <n-space vertical>
         <a href="tel:+79009009090">+7 (900) 900-90-90</a>
         <a href="mailto: sail@mail.com">sail@mail.com</a>
-        <div class="socials">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
       </n-space>
     </div>
     </n-space>
+    <n-divider />
   </n-layout-footer>
   </n-config-provider>
 </template>
 
 <script>
-import {NButton, NLayoutFooter, NSpace} from 'naive-ui'
+import {NButton, NLayoutFooter, NSpace, NDivider} from 'naive-ui'
 import { darkTheme } from 'naive-ui'
 
 export default {
   name: "ShopFooter",
   components: {
-    NButton, NLayoutFooter, NSpace
+    NButton, NLayoutFooter, NSpace, NDivider
   },
   setup() {
     return {

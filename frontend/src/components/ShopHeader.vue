@@ -1,19 +1,6 @@
 <template>
   <n-config-provider>
   <n-layout-header bordered>
-    <div class="top-header">
-    <n-space horizontal style="gap: 3px" justify='space-between' align="start">
-      <n-space>
-        <a href="">Контакты</a>
-        <a href="">О нас</a>
-        <a href="">Доставка</a>
-      </n-space>
-      <n-space>
-        <a href="">logo</a>
-        <a href="">Написать нам</a>
-      </n-space>
-    </n-space>
-    </div>
     <div class="bottom-header">
       <n-space horizontal style="gap: 3px" justify='space-between' align="baseline">
         <h1>Logo</h1>
@@ -23,14 +10,13 @@
             :options="options"
             placement="bottom-start"
             trigger="hover">
-          <n-button color="#616575">Каталог</n-button>
+          <n-button color="#616575">Категории</n-button>
         </n-dropdown>
-        <n-input v-model:value="value" type="text" placeholder="Че ищем?" />
+        <n-input v-model:value="value" type="text" placeholder="Поиск по статьям" />
         </div>
         <n-space horizontal>
           <a href="">Избранное</a>
           <a href="">Вход/Регистрация</a>
-          <a href="">Корзина</a>
         </n-space>
       </n-space>
     </div>
@@ -55,35 +41,35 @@ export default defineComponent({
       options: [
         {
           label: 'Одежда',
-          key: 'marina bay sands',
+          key: 'Одежда',
         },
         {
           label: "Обувь",
-          key: "brown's hotel, london"
+          key: "Обувь"
         },
         {
           label: 'Верхняя одежда',
-          key: 'atlantis nahamas, nassau'
+          key: 'Верхняя одежда'
         },
         {
           label: 'Домашняя одежда',
-          key: 'the beverly hills hotel, los angeles'
+          key: 'Домашняя одежда'
         },
         {
           label: 'Купальники',
-          key: 'atlantis nahamas, nassau'
+          key: 'Купальники'
         },
         {
           label: 'Аксессуары',
-          key: 'atlantis nahamas, nassau'
+          key: 'Аксессуары'
         },
         {
           label: 'Идеи для подарков',
-          key: 'atlantis nahamas, nassau'
+          key: 'Идеи для подарков'
         },
         {
           label: 'Marina rinaldi',
-          key: 'atlantis nahamas, nassau'
+          key: 'Marina rinaldi'
         }
       ],
       handleSelect(key) {

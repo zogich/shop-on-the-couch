@@ -1,7 +1,5 @@
 <template>
   <div>
-    Ваше имя: {{name}}
-    Это будущий каталог.
     <n-button type="error">Ок</n-button>
   </div>
 </template>
