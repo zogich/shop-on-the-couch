@@ -24,7 +24,7 @@ import ArticleCardLong from "../components/ArticleCardLong.vue";
     </div>
   </n-back-top>
   <ArticleCardLong />
-    <n-grid cols="4" responsive="screen" layout-shift-disabled :x-gap="10" :y-gap="10">
+    <n-grid cols="1 s:2 m:4" responsive="screen" :x-gap="10" :y-gap="10">
       <n-grid-item><ArticleCardNormal/></n-grid-item>
       <n-grid-item><ArticleCardNormal/></n-grid-item>
       <n-grid-item><ArticleCardNormal/></n-grid-item>
