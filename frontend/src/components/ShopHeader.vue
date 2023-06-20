@@ -16,7 +16,10 @@
         </div>
         <n-space horizontal>
           <a href="">Избранное</a>
+<!--<<<<<<< Updated upstream-->
           <router-link :to="'/login'">Вход/Регистрация</router-link>
+<!--=======-->
+<!--&gt;>>>>>> Stashed changes-->
         </n-space>
       </n-space>
     </div>
@@ -26,7 +29,7 @@
 
 <script>
 import {NButton, NLayoutHeader, NSpace, NDropdown, NInput} from 'naive-ui'
-import { darkTheme, useMessage} from 'naive-ui'
+import { useMessage } from 'naive-ui'
 import {defineComponent, ref} from 'vue'
 
 export default defineComponent({
