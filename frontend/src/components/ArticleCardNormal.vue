@@ -10,8 +10,8 @@
     <p class="card-description"> {{this.article.text}} </p>
     <n-divider />
     <div class="date-and-category">
-      <span> {{ this.article.publication_date }} </span>
-      <span>Категория</span>
+      <span>01.01.2001</span>
+      <span>{{this.article.category}}</span>
     </div>
   </n-card>
   </n-layout>
@@ -29,10 +29,8 @@ export default {
   props: {
     article: Object
   },
-
   async created(){
   },
-
 }
 
 </script>
