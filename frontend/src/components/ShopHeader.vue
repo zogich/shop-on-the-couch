@@ -16,7 +16,7 @@
         </div>
         <n-space horizontal>
           <a href="">Избранное</a>
-          <a href="">Вход/Регистрация</a>
+          <router-link :to="'/login'">Вход/Регистрация</router-link>
         </n-space>
       </n-space>
     </div>

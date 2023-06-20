@@ -30,7 +30,6 @@ export default {
     article: Object
   },
   async created(){
-    console.log(this.article)
   },
 }
 

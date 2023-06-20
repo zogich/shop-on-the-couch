@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import articleModule from "./modules/article.js";
+import tokenModule from "./modules/token";
 
 export default createStore({
   state: {
@@ -10,5 +11,6 @@ export default createStore({
   },
   modules: {
     article: articleModule,
+    token: tokenModule,
   },
 })
