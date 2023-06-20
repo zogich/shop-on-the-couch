@@ -28,14 +28,14 @@
 </template>
 
 <script>
-import {NButton, NLayoutHeader, NSpace, NDropdown, NInput} from 'naive-ui'
+import {NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider} from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import {defineComponent, ref} from 'vue'
 
 export default defineComponent({
   name: "ShopHeader",
   components: {
-    NButton, NLayoutHeader, NSpace, NDropdown, NInput
+    NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider
   },
   setup() {
     const message = useMessage();
