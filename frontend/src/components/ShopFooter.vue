@@ -45,13 +45,13 @@
 </template>
 
 <script>
-import {NButton, NLayoutFooter, NSpace, NDivider} from 'naive-ui'
+import {NButton, NLayoutFooter, NSpace, NDivider, NConfigProvider} from 'naive-ui'
 import { darkTheme } from 'naive-ui'
 
 export default {
   name: "ShopFooter",
   components: {
-    NButton, NLayoutFooter, NSpace, NDivider
+    NButton, NLayoutFooter, NSpace, NDivider, NConfigProvider
   },
   setup() {
     return {

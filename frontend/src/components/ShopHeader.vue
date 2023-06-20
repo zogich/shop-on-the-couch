@@ -16,7 +16,10 @@
         </div>
         <n-space horizontal>
           <a href="">Избранное</a>
+<!--<<<<<<< Updated upstream-->
           <router-link :to="'/login'">Вход/Регистрация</router-link>
+<!--=======-->
+<!--&gt;>>>>>> Stashed changes-->
         </n-space>
       </n-space>
     </div>
@@ -25,14 +28,14 @@
 </template>
 
 <script>
-import {NButton, NLayoutHeader, NSpace, NDropdown, NInput} from 'naive-ui'
-import { darkTheme, useMessage} from 'naive-ui'
+import {NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider} from 'naive-ui'
+import { useMessage } from 'naive-ui'
 import {defineComponent, ref} from 'vue'
 
 export default defineComponent({
   name: "ShopHeader",
   components: {
-    NButton, NLayoutHeader, NSpace, NDropdown, NInput
+    NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider
   },
   setup() {
     const message = useMessage();
