@@ -19,7 +19,6 @@
 <script>
 
 import { NButton, NInput, NSpace, NH1, NText } from 'naive-ui'
-import api from "../store/api";
 
 export default {
   name: "LoginView",

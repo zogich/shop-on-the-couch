@@ -16,10 +16,8 @@
         </div>
         <n-space horizontal>
           <a href="">Избранное</a>
-<!--<<<<<<< Updated upstream-->
           <router-link :to="'/login'">Вход/Регистрация</router-link>
-<!--=======-->
-<!--&gt;>>>>>> Stashed changes-->
+          <router-link v-if="this.$store.state.token.isAuthenticated" :to="'/magazine-admin'">Админка</router-link>
         </n-space>
       </n-space>
     </div>
