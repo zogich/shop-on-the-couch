@@ -1,4 +1,5 @@
 <template>
+  <n-layout>
   <n-back-top
       :right="40"
       :bottom="160"
@@ -24,10 +25,11 @@
         <router-link :to="{ name: 'article', params: {id: item.id} }"><ArticleCardNormal :article="item"></ArticleCardNormal></router-link>
       </n-grid-item>
     </n-grid>
+  </n-layout>
 </template>
 
 <script>
-import {NButton, NLayout, NSpace, NCard, NGrid, NGridItem, NBackTop} from 'naive-ui'
+import { NLayout, NGrid, NGridItem, NBackTop } from 'naive-ui'
 import ArticleCardNormal from "../components/ArticleCardNormal.vue";
 import ArticleCardLong from "../components/ArticleCardLong.vue";
 
@@ -35,7 +37,7 @@ import ArticleCardLong from "../components/ArticleCardLong.vue";
 export default {
   name: "HomeView",
   components: {
-    NLayout, NButton, NSpace, NCard, NGrid, NGridItem, NBackTop, ArticleCardNormal, ArticleCardLong
+    NLayout, NGrid, NGridItem, NBackTop, ArticleCardNormal, ArticleCardLong
   },
   data(){
     return {

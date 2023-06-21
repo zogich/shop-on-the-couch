@@ -1,4 +1,5 @@
 <template>
+  <n-layout>
     <n-space vertical size="large">
       <n-h1>
         <n-text>Авторизация</n-text>
@@ -14,16 +15,17 @@
       Авторизация:
       {{this.$store.state.token.isAuthenticated}}
     </n-space>
+  </n-layout>
 </template>
 
 <script>
 
-import { NButton, NInput, NSpace, NH1, NText } from 'naive-ui'
+import { NButton, NInput, NSpace, NH1, NText, NLayout } from 'naive-ui'
 
 export default {
   name: "LoginView",
   components: {
-    NButton, NInput, NSpace, NH1, NText
+    NButton, NInput, NSpace, NH1, NText, NLayout
   },
   data(){
     return {

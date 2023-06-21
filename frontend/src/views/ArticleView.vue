@@ -1,6 +1,7 @@
 
 
 <template>
+  <n-layout>
   <n-back-top
       :right="40"
       :bottom="160"
@@ -46,6 +47,7 @@
   <n-h1>
     <n-text>Читайте также:</n-text>
   </n-h1>
+  </n-layout>
 </template>
 
 <script>
