@@ -1,6 +1,4 @@
-<script setup>
-import ArticleCardNormal from "../components/ArticleCardNormal.vue";
-</script>
+
 
 <template>
   <n-back-top
@@ -32,8 +30,7 @@ import ArticleCardNormal from "../components/ArticleCardNormal.vue";
   </div>
   <n-divider/>
   <div class="article-content">
-<!--    <p>{{this.article.text}}}</p>-->
-    <p>Здесь должен быть текст статьи</p>
+   <p>{{this.article.text}}</p>
   </div>
   <n-grid cols="1 s:2 m:3" responsive="screen" :x-gap="10" :y-gap="10">
     <n-grid-item>
@@ -53,17 +50,26 @@ import ArticleCardNormal from "../components/ArticleCardNormal.vue";
 
 <script>
 import {NButton, NLayout, NSpace, NBackTop, NLayoutContent, NH1, NText, NImage, NDivider, NGrid} from 'naive-ui'
-// import ArticleCardNormal from "../components/ArticleCardNormal.vue";
+import ArticleCardNormal from "../components/ArticleCardNormal.vue";
+import api from "../store/api.js";
 
 export default {
   name: "ArticleView",
   components: {
-    NLayout, NButton, NSpace, NBackTop, NLayoutContent, NH1, NText, NImage, NDivider, NGrid
+    NLayout, NButton, NSpace, NBackTop, NLayoutContent, NH1, NText, NImage, NDivider, NGrid, ArticleCardNormal
   },
   props: {
-    article: Object
+    articleId: 0
+  },
+  data(){
+    return {
+      article: Object
+    }
   },
   async created(){
+    await api.get('/api/article/', {params: {id: this.articleId}}).then(response =>{
+      this.article = response.data[0];
+    })
     console.log(this.article)
   }
 }
