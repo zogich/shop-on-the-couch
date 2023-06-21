@@ -22,7 +22,7 @@
   <ArticleCardLong />
     <n-grid cols="1 s:2 m:4" responsive="screen" :x-gap="10" :y-gap="10">
       <n-grid-item v-for="item in this.$store.state.article.articles" :key="item.id" >
-        <ArticleCardNormal :article="item"></ArticleCardNormal>
+        <router-link :to="{ name: 'article', params: {id: item.id} }"><ArticleCardNormal :article="item"></ArticleCardNormal></router-link>
       </n-grid-item>
     </n-grid>
   </n-layout>

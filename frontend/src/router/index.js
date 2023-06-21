@@ -18,9 +18,13 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/article',
+      path: '/article/:id/',
       name: 'article',
-      component: ArticleView
+      component: ArticleView,
+      props: (route) =>{
+        const articleId = route.params.id;
+        return { articleId, ...route.params }
+      }
     },
     {
       path: '/magazine-admin',

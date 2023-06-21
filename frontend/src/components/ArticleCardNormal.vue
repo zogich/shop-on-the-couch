@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <n-layout>
   <n-card :title="this.article.name" size="medium">
