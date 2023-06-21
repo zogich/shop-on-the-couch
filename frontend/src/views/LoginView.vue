@@ -4,8 +4,8 @@
         <n-text>Авторизация</n-text>
       </n-h1>
           <n-space vertical>
-            <n-input v-model="username" placeholder="username" />
-            <n-input v-model="password" placeholder="password" type="password" show-password-on="mousedown" />
+            <n-input v-model:value="username" placeholder="username" />
+            <n-input v-model:value="password" placeholder="password" type="password" show-password-on="mousedown" />
             <n-space justify="end">
               <n-button @click='login'>Login</n-button>
               <n-button @click="logout">Logout</n-button>
