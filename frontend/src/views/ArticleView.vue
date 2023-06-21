@@ -3,6 +3,7 @@ import ArticleCardNormal from "../components/ArticleCardNormal.vue";
 </script>
 
 <template>
+  <n-layout>
   <n-back-top
       :right="40"
       :bottom="160"
@@ -49,16 +50,17 @@ import ArticleCardNormal from "../components/ArticleCardNormal.vue";
   <n-h1>
     <n-text>Читайте также:</n-text>
   </n-h1>
+  </n-layout>
 </template>
 
 <script>
-import {NButton, NLayout, NSpace, NBackTop, NLayoutContent, NH1, NText, NImage, NDivider, NGrid} from 'naive-ui'
+import { NLayout, NBackTop, NH1, NText, NImage, NDivider, NGrid } from 'naive-ui'
 // import ArticleCardNormal from "../components/ArticleCardNormal.vue";
 
 export default {
   name: "ArticleView",
   components: {
-    NLayout, NButton, NSpace, NBackTop, NLayoutContent, NH1, NText, NImage, NDivider, NGrid
+    NLayout, NBackTop, NH1, NText, NImage, NDivider, NGrid
   },
   props: {
     article: Object
