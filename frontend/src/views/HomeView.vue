@@ -46,9 +46,7 @@ export default {
   },
   methods: {
   },
-  async created(){
-      await this.$store.dispatch('fetchAllArticles')
-  }
+
 }
 </script>
 

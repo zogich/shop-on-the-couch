@@ -72,7 +72,6 @@ export default {
     await api.get('/api/article/', {params: {id: this.articleId}}).then(response =>{
       this.article = response.data[0];
     })
-    console.log(this.article)
   }
 }
 </script>

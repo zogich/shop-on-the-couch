@@ -12,11 +12,11 @@
             <th>Действия</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody v-for="item in this.$store.state.article.articles" :key="item.id">
           <tr>
-            <td>放弃</td>
-            <td>反常的</td>
-            <td>彻底废除</td>
+            <td>{{item.name}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.publication_date}}</td>
             <td>
               <n-space>
                 <n-button type="warning">Редактировать</n-button>
@@ -83,7 +83,11 @@ export default defineComponent({
       EyeOutline,
       EyeOffOutline
     };
-  }
+  },
+  data(){
+    return {
+    }
+  },
 });
 </script>
 

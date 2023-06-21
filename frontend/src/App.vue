@@ -1,11 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import ShopHeader from "./components/ShopHeader.vue"
-import ShopFooter from "./components/ShopFooter.vue"
-import {NMessageProvider, NLoadingBarProvider, NNotificationProvider, NDialogProvider} from 'naive-ui'
-
-</script>
-
 <template>
   <n-loading-bar-provider>
     <n-message-provider>
@@ -28,3 +20,20 @@ import {NMessageProvider, NLoadingBarProvider, NNotificationProvider, NDialogPro
    /*flex-direction: column;*/
  }
 </style>
+<script>
+
+import { RouterLink, RouterView } from 'vue-router'
+import ShopHeader from "./components/ShopHeader.vue"
+import ShopFooter from "./components/ShopFooter.vue"
+import {NMessageProvider, NLoadingBarProvider, NNotificationProvider, NDialogProvider} from 'naive-ui'
+
+export default {
+  name: 'App',
+  components: {RouterView, RouterLink, ShopFooter, ShopHeader, NMessageProvider, NLoadingBarProvider, NNotificationProvider,
+  NDialogProvider},
+  async created(){
+      await this.$store.dispatch('fetchAllArticles');
+  }
+}
+
+</script>
