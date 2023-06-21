@@ -2,7 +2,6 @@
   <n-layout>
   <n-card :title="this.article.name" size="medium">
     <template #cover>
-      <img src="@/src/assets/logo.svg" alt="">
     </template>
     <p class="card-description"> {{this.article.text}} </p>
     <n-divider />
