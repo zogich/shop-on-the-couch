@@ -24,10 +24,10 @@
   <n-image src="../src/assets/logo.svg"/>
   <div class="article-header">
     <n-h1>
-      <n-text>Название статьи</n-text>
+      <n-text>{{this.article.name}}</n-text>
     </n-h1>
-    <n-text itelic style="margin-right: 10px">01.01.2021</n-text>
-    <n-text type="info">Категория</n-text>
+    <n-text itelic style="margin-right: 10px">{{this.article.date}}</n-text>
+    <n-text type="info">{{this.article.category}}</n-text>
   </div>
   <n-divider/>
   <div class="article-content">
@@ -76,6 +76,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
   .article-header >.n-h1 > .n-text{

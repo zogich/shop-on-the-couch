@@ -14,9 +14,9 @@
           </thead>
           <tbody>
           <tr>
-            <td>放弃</td>
-            <td>反常的</td>
-            <td>彻底废除</td>
+            <td>Пасхальные и музыкальные</td>
+            <td>Люди</td>
+            <td>01.01.2001</td>
             <td>
               <n-space>
                 <n-button type="warning">Редактировать</n-button>
@@ -49,9 +49,9 @@
           </thead>
           <tbody>
           <tr>
-            <td>放弃</td>
-            <td>反常的</td>
-            <td>彻底废除</td>
+            <td>Kirill Pogranichniy</td>
+            <td>20.06.2023</td>
+            <td>Читатель</td>
             <td>
               <n-space>
                 <n-button type="primary">Назначить администратором</n-button>
