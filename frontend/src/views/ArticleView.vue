@@ -70,7 +70,7 @@ export default {
   },
   async created(){
     await api.get('/api/article/', {params: {id: this.articleId}}).then(response =>{
-      this.article = response.data[0];
+      this.article = response.data[0]
     })
   }
 }
