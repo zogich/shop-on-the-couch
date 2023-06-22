@@ -12,8 +12,11 @@
             <th>Действия</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody v-for="item in this.$store.state.article.articles" :key="item.id">
           <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.publication_date}}</td>
             <td>Пасхальные и музыкальные</td>
             <td>Люди</td>
             <td>01.01.2001</td>
@@ -83,7 +86,11 @@ export default defineComponent({
       EyeOutline,
       EyeOffOutline
     };
-  }
+  },
+  data(){
+    return {
+    }
+  },
 });
 </script>
 

@@ -2,7 +2,6 @@
   <n-layout>
     <n-card title="Название статьи" size="large">
       <template #cover>
-        <img src="./src/assets/logo.svg" alt="">
       </template>
       <div class="date-and-category">
         <span>01.01.2001</span>

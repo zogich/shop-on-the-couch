@@ -7,7 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "prod_build": "vite build"
+    "prod_build": "vite build --emptyOutDir"
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.12.0",
