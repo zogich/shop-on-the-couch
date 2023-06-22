@@ -39,4 +39,8 @@ export default {
   display: flex;
 }
 
+.date-and-category > span {
+  margin-right: 10px;
+}
+
 </style>
