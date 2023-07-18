@@ -1,17 +1,18 @@
 <template>
   <n-layout>
-  <n-card :title="this.article.name" size="medium">
+  <n-card :title="article.name" size="medium">
     <template #cover>
     </template>
-    <p class="card-description"> {{this.article.text}} </p>
+    <p class="card-description"> {{article.text}} </p>
     <n-divider />
     <div class="date-and-category">
       <span>01.01.2001</span>
-      <span>{{this.article.category}}</span>
+      <span>{{article.category}}</span>
     </div>
   </n-card>
   </n-layout>
 </template>
+
 
 <script>
 

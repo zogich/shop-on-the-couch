@@ -24,8 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = os.getenv('DJANGO_DEBUG')
-ALLOWED_HOSTS = [os.getenv('DJANGO_ALLOWED_HOSTS'), ]
-CSRF_TRUSTED_ORIGINS = [os.getenv('DJANGO_CSRF_TRUSTED_ORIGINS'), ]
+ALLOWED_HOSTS = [os.getenv('DJANGO_ALLOWED_HOSTS')]
+CSRF_TRUSTED_ORIGINS = [os.getenv('DJANGO_CSRF_TRUSTED_ORIGINS')]
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000']
 
 # Application definition
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'django_filters',
+    'corsheaders',
 ]
 
 SIMPLE_JWT = {
@@ -59,6 +61,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
