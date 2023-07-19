@@ -12,6 +12,7 @@ constantly==15.1.0
 cryptography==40.0.1
 defusedxml==0.7.1
 Django==4.2
+django-cors-headers==4.2.0
 django-filter==23.1
 django-templated-mail==1.1.1
 djangorestframework==3.14.0
