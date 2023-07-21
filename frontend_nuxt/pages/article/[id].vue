@@ -20,6 +20,7 @@
     </div>
   </n-back-top>
   <n-image src="../src/assets/logo.svg"/>
+    <nuxt-link :to="{ name: 'editor-id', params:{id: article.id}} "><n-button></n-button></nuxt-link>
   <div class="article-header">
     <n-h1>
       <n-text>{{article.name}}</n-text>
