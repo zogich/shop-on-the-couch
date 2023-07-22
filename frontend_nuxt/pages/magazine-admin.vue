@@ -17,12 +17,9 @@
             <td>{{item.name}}</td>
             <td>{{item.category}}</td>
             <td>{{item.publication_date}}</td>
-            <td>Пасхальные и музыкальные</td>
-            <td>Люди</td>
-            <td>01.01.2001</td>
             <td>
               <n-space>
-                <n-button type="warning">Редактировать</n-button>
+                <nuxt-link :to="{ name: 'editor-id', params:{id: item.id}} "><n-button type="warning">Редактировать</n-button></nuxt-link>
                 <n-button type="error">Удалить</n-button>
                 <n-switch v-model:value="active" size="large">
                   <template #checked-icon>
