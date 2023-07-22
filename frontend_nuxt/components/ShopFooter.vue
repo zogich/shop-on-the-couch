@@ -1,6 +1,6 @@
 <template>
   <n-config-provider>
-  <n-layout-footer bordered position="absolute">
+  <n-layout-footer bordered position="relative">
     <h1>Logo</h1>
     <n-space horizontal style="gap: 3px" justify='space-between' align="start">
     <n-space vertical>
