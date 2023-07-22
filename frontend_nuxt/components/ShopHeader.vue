@@ -4,7 +4,7 @@
     <div class="bottom-header">
       <n-space horizontal style="gap: 3px" justify='space-between' align="baseline">
         <h1>Logo</h1>
-        <div class="search-tab">
+        <n-input-group>
         <n-dropdown
             @select="handleSelect"
             :options="categoriesNames"
@@ -13,7 +13,7 @@
           <n-button color="#616575">Категории</n-button>
         </n-dropdown>
         <n-input v-model:value="value" type="text" placeholder="Поиск по статьям" />
-        </div>
+        </n-input-group>
         <n-space horizontal>
           <a href="">Избранное</a>
           <router-link :to="'/login'">Вход/Регистрация</router-link>
@@ -30,7 +30,7 @@
 </script>
 
 <script>
-import {NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider} from 'naive-ui'
+import {NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider, NInputGroup} from 'naive-ui'
 import { useMessage } from 'naive-ui'
 import {defineComponent, ref} from 'vue'
   import useTokenStore from "../stores/modules/token";
@@ -39,7 +39,7 @@ import {defineComponent, ref} from 'vue'
 export default defineComponent({
   name: "ShopHeader",
   components: {
-    NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider
+    NButton, NLayoutHeader, NSpace, NDropdown, NInput, NConfigProvider, NInputGroup
   },
   async setup() {
     const message = useMessage();
@@ -86,8 +86,5 @@ export default defineComponent({
   padding: 0 100px;
 }
 
-.search-tab {
-  display: flex;
-}
 
 </style>
