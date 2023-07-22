@@ -11,12 +11,17 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^18.16.19",
-    "nuxt": "^3.6.2"
+    "nuxt": "^3.6.2",
+    "sass": "^1.64.1"
   },
   "dependencies": {
     "@editorjs/editorjs": "^2.27.2",
     "@editorjs/header": "^2.7.0",
     "@pinia/nuxt": "^0.4.11",
+    "@tiptap/extension-table": "^2.0.4",
+    "@tiptap/extension-table-cell": "^2.0.4",
+    "@tiptap/extension-table-header": "^2.0.4",
+    "@tiptap/extension-table-row": "^2.0.4",
     "@tiptap/pm": "^2.0.4",
     "@tiptap/starter-kit": "^2.0.4",
     "@tiptap/vue-3": "^2.0.4",
