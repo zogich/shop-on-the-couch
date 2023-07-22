@@ -14,9 +14,15 @@
     "nuxt": "^3.6.2"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.27.2",
+    "@editorjs/header": "^2.7.0",
     "@pinia/nuxt": "^0.4.11",
+    "@tiptap/pm": "^2.0.4",
+    "@tiptap/starter-kit": "^2.0.4",
+    "@tiptap/vue-3": "^2.0.4",
     "@vicons/ionicons5": "^0.12.0",
     "naive-ui": "^2.34.4",
+    "nuxt-editorjs": "^1.0.4",
     "pinia": "^2.1.4"
   },
   "overrides": {
