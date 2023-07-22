@@ -7,6 +7,7 @@
           <div style="padding: 10px 96px">
           <NuxtPage />
           </div>
+          <ShopFooter />
 
         </n-dialog-provider>
       </n-notification-provider>
