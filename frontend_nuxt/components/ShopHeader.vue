@@ -16,7 +16,7 @@
         </n-input-group>
         <n-space horizontal>
           <a href="">Избранное</a>
-          <router-link :to="'/login'">Вход/Регистрация</router-link>
+          <router-link v-if="!tokenStore.isAuthenticated" :to="'/login'">Вход/Регистрация</router-link>
           <router-link v-if="tokenStore.isAuthenticated" :to="'/magazine-admin'">Админка</router-link>
         </n-space>
       </n-space>

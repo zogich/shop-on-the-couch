@@ -20,7 +20,9 @@
     </div>
   </n-back-top>
   <n-image src="../src/assets/logo.svg"/>
-    <nuxt-link :to="{ name: 'editor-id', params:{id: article.id}} "><n-button></n-button></nuxt-link>
+    <nuxt-link v-if="tokenStore.isAuthenticated" :to="{ name: 'editor-id', params:{id: article.id}} ">
+      <n-button type="warning">Редактировать</n-button>
+    </nuxt-link>
   <div class="article-header">
     <n-h1>
       <n-text>{{article.name}}</n-text>
@@ -52,6 +54,7 @@
 <script>
 import {NButton, NLayout, NSpace, NBackTop, NLayoutContent, NH1, NText, NImage, NDivider, NGrid} from 'naive-ui'
 import ArticleCardNormal from "../../components/ArticleCardNormal.vue";
+import useTokenStore from "../../stores/modules/token.js";
 import api from '../../stores/api.js'
 
 export default {
@@ -64,12 +67,13 @@ export default {
   },
 
   async setup(){
+    const tokenStore = useTokenStore();
     const route = useRoute();
     let article = null;
     await api.get('/api/article/', {params: { id: route.params.id }}).then(response =>{
       article = response.data[0]
     })
-    return { route, article }
+    return { tokenStore, route, article }
   },
 
 }
